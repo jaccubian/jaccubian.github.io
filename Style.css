@@ -514,7 +514,7 @@ footer ul li a{
         right: 0;
         width: 50%;
         padding: 1rem 3rem;
-        background-color: rgba(0, 0, 0, 0.359);
+        background-color: rgba(0, 0, 0, 0.8);
         border-bottom-left-radius: 2rem;
         border-left: 2px solid var(--main-color);
         border-bottom: 2px solid var(--main-color);
