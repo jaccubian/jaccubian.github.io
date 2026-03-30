@@ -553,8 +553,8 @@ footer ul li a{
         text-align: center;
         margin: 2rem 0;
     }
-    .about-img {
-        width: 50vw;
+    .about-img{
+        display: none;
     }   
     .contact form{
         flex-direction: column;
