@@ -28,8 +28,8 @@
   const positions = new Float32Array(particleCount * 3);
   const colors = new Float32Array(particleCount * 3);
 
-  const colorA = new THREE.Color('#ea580c');
-  const colorB = new THREE.Color('#DF8908');
+  const colorA = new THREE.Color('#00f0ff');
+  const colorB = new THREE.Color('#b300ff');
 
   for (let i = 0; i < particleCount; i++) {
     const radius = 200 + Math.random() * 200;
@@ -51,10 +51,10 @@
   geometry.setAttribute('color', new THREE.BufferAttribute(colors, 3));
 
   const material = new THREE.PointsMaterial({
-    size: 3.5,
+    size: 4,
     vertexColors: true,
     transparent: true,
-    opacity: 0.8,
+    opacity: 0.6,
     blending: THREE.AdditiveBlending,
     depthWrite: false,
     sizeAttenuation: true,
