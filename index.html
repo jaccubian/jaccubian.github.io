@@ -26,26 +26,26 @@
 
         <nav class="navbar">
             <a href="#home">Home</a>
-            <a href="#about">Ecucation</a>
+            <a href="#about">About</a>
             <a href="#services">Relevant Skills</a>
             <a href="#projects">Projects</a>
-            <a href="#certificate">Certificate</a>
-            <!-- <a href="#contact">Contact</a>   -->
+            <a href="#certificate">Background</a>
+            <a href="#contact" class="lets-talk-btn">Let's Talk</a>
         </nav>
-
-        <!-- <a href="">
-             <button class="gradiant-btn">Contact Me</button>
-        </a> -->
 
     </header>
 
     <section class="home" id="home">
         <div class="home-content">
-            <h1>Hi, It's <span>Jedrick</span></h1>
-            <h3>
-                I'm a <span>Web Application Developer</span>
+            <div class="home-greeting">
+                <span class="wave">👋</span>
+                <span class="greet-text">Hi, It's</span>
+            </div>
+            <h1 class="glitch-name" data-text="Jedrick"><span>Jedrick</span></h1>
+            <h3 class="role-line">
+                I'm a <span class="typing-role">Web Application Developer</span><span class="cursor-blink">|</span>
             </h3>
-            <p>Web Development student with a knack for building from the ground up. I’m deep into PHP, MySQL, and modern web tech, always looking for ways to make systems more efficient and user-friendly. I’m ready to stop practicing and start contributing to real-world projects that challenge how I think and code. </p>
+            <p class="hero-desc"><span class="desc-accent"></span>Web Development student with a knack for building from the ground up. I'm deep into PHP, MySQL, and modern web tech, always looking for ways to make systems more efficient and user-friendly. I'm ready to stop practicing and start contributing to real-world projects that challenge how I think and code.</p>
             
             <div class="social-icons">
                 <a href="https://www.linkedin.com/in/jedrick-cubian-2b26a4236?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app">
@@ -72,41 +72,145 @@
 
     <section class="about" id="about">
         <div class="about-content">
-            <h2 class="heading">About <span> me</span></h2>
+            <h2 class="heading">About <span>me</span></h2>
 
-        <div class="edu-container">
+        <div class="about-layout">
 
-            <div class="edu-box">
+            <div class="about-text">
+                <p>I enjoy building web applications that are simple to use, reliable, and designed to solve real problems. From planning the database to developing the backend and creating responsive user interfaces, I like being involved in every stage of the development process.</p>
+                <p>My experience includes working with <span class="highlight-text">Next.js</span>, <span class="highlight-text">Tailwind CSS</span>, <span class="highlight-text">PHP</span>, <span class="highlight-text">Python</span>, <span class="highlight-text">Flask</span>, <span class="highlight-text">Node.js</span>, and <span class="highlight-text">MySQL</span>. I've also explored blockchain development through smart contracts, deployment, testing, and basic security practices. Every project gives me a chance to learn something new and improve the way I write code.</p>
+                <p class="typing-line">As a developer, I'm always looking for ways to grow. I enjoy taking on new challenges, learning modern technologies, and turning ideas into working applications. I'm now looking for an opportunity where I can contribute to real projects, work alongside experienced developers, and continue growing as a full-stack developer.</p>
+            </div>
 
-                <div class="edu-card" data-tilt>
-                    
-                    <img src="download.png" alt="">
+        <div class="spiral-wrapper">
+            <div class="spiral-stage" id="spiralStage">
 
-                    <h3>TERTIARY</h3>
-                    <p>ACLC COLLEGE OF TACLOBAN <br>
-                    DIP IN WEB APPLICATION DEVELOPMENT <br>
-                    (2023-Present) 
-                
-                    </p>
+                <div class="spiral-card">
+                    <div class="skill-header">
+                        <i class='bx bx-link-alt'></i>
+                        <h3>Blockchain</h3>
+                        <span class="skill-level">Skillful</span>
+                    </div>
+                    <div class="skill-progress">
+                        <span class="progress-label">Overall Proficiency</span>
+                        <div class="progress-bar">
+                            <div class="progress-fill" style="width: 75%"></div>
+                        </div>
+                    </div>
+                    <div class="skill-subskills">
+                        <div class="subskill-item">
+                            <span class="subskill-name">Smart Contract Deployment</span>
+                            <div class="subskill-bar"><div class="subskill-fill" style="width: 80%"></div></div>
+                        </div>
+                        <div class="subskill-item">
+                            <span class="subskill-name">Hardhat</span>
+                            <div class="subskill-bar"><div class="subskill-fill" style="width: 70%"></div></div>
+                        </div>
+                        <div class="subskill-item">
+                            <span class="subskill-name">Contract Testing</span>
+                            <div class="subskill-bar"><div class="subskill-fill" style="width: 65%"></div></div>
+                        </div>
+                        <div class="subskill-item">
+                            <span class="subskill-name">Gas Optimization</span>
+                            <div class="subskill-bar"><div class="subskill-fill" style="width: 60%"></div></div>
+                        </div>
+                        <div class="subskill-item">
+                            <span class="subskill-name">Basic Security Practices</span>
+                            <div class="subskill-bar"><div class="subskill-fill" style="width: 70%"></div></div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="spiral-card">
+                    <div class="skill-header">
+                        <i class='bx bx-code-alt'></i>
+                        <h3>Frontend Development</h3>
+                        <span class="skill-level">Skillful</span>
+                    </div>
+                    <div class="skill-progress">
+                        <span class="progress-label">Overall Proficiency</span>
+                        <div class="progress-bar">
+                            <div class="progress-fill" style="width: 75%"></div>
+                        </div>
+                    </div>
+                    <div class="skill-subskills">
+                        <div class="subskill-item">
+                            <span class="subskill-name">HTML5</span>
+                            <div class="subskill-bar"><div class="subskill-fill" style="width: 95%"></div></div>
+                        </div>
+                        <div class="subskill-item">
+                            <span class="subskill-name">CSS3</span>
+                            <div class="subskill-bar"><div class="subskill-fill" style="width: 90%"></div></div>
+                        </div>
+                        <div class="subskill-item">
+                            <span class="subskill-name">TypeScript</span>
+                            <div class="subskill-bar"><div class="subskill-fill" style="width: 75%"></div></div>
+                        </div>
+                        <div class="subskill-item">
+                            <span class="subskill-name">Next.js</span>
+                            <div class="subskill-bar"><div class="subskill-fill" style="width: 70%"></div></div>
+                        </div>
+                        <div class="subskill-item">
+                            <span class="subskill-name">Tailwind CSS</span>
+                            <div class="subskill-bar"><div class="subskill-fill" style="width: 85%"></div></div>
+                        </div>
+                        <div class="subskill-item">
+                            <span class="subskill-name">Responsive Web Design</span>
+                            <div class="subskill-bar"><div class="subskill-fill" style="width: 80%"></div></div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="spiral-card">
+                    <div class="skill-header">
+                        <i class='bx bx-server'></i>
+                        <h3>Backend Development</h3>
+                        <span class="skill-level">Experienced</span>
+                    </div>
+                    <div class="skill-progress">
+                        <span class="progress-label">Overall Proficiency</span>
+                        <div class="progress-bar">
+                            <div class="progress-fill" style="width: 90%"></div>
+                        </div>
+                    </div>
+                    <div class="skill-subskills">
+                        <div class="subskill-item">
+                            <span class="subskill-name">PHP</span>
+                            <div class="subskill-bar"><div class="subskill-fill" style="width: 85%"></div></div>
+                        </div>
+                        <div class="subskill-item">
+                            <span class="subskill-name">Python</span>
+                            <div class="subskill-bar"><div class="subskill-fill" style="width: 80%"></div></div>
+                        </div>
+                        <div class="subskill-item">
+                            <span class="subskill-name">Flask</span>
+                            <div class="subskill-bar"><div class="subskill-fill" style="width: 75%"></div></div>
+                        </div>
+                        <div class="subskill-item">
+                            <span class="subskill-name">Node.js</span>
+                            <div class="subskill-bar"><div class="subskill-fill" style="width: 80%"></div></div>
+                        </div>
+                        <div class="subskill-item">
+                            <span class="subskill-name">Express.js</span>
+                            <div class="subskill-bar"><div class="subskill-fill" style="width: 75%"></div></div>
+                        </div>
+                        <div class="subskill-item">
+                            <span class="subskill-name">Database Design</span>
+                            <div class="subskill-bar"><div class="subskill-fill" style="width: 85%"></div></div>
+                        </div>
+                    </div>
                 </div>
 
             </div>
 
-            <div class="edu-box">
-
-                <div class="edu-card" data-tilt>
-                    
-                    <img src="download.png" alt="">
-
-                    <h3>SECONDARY</h3>
-                    <p>ABUYOG ACADEMY <br>
-                    (2021-2023) SHS 
-                
-                    </p>
-                </div>
-
+            <div class="spiral-nav">
+                <span class="spiral-dot active" data-index="0"></span>
+                <span class="spiral-dot" data-index="1"></span>
+                <span class="spiral-dot" data-index="2"></span>
             </div>
+        </div>
 
+        </div>
         </div>
 
     </section>
@@ -198,7 +302,9 @@
 
             <div class="project-card" data-tilt>
                 
-                <img src="lendr.png" alt="">
+                <div class="project-icon-box">
+                    <i class="bx bx-coin-stack"></i>
+                </div>
 
                 <h3><a href="https://lendr.cash/#/" target="_blank" rel="noopener" style="color: inherit; text-decoration: none;">Lendr.cash</a></h3>
                 <ul class="project-list">
@@ -209,7 +315,9 @@
 
              <div class="project-card" data-tilt>
                 
-                <img src="Screenshot (8).png" alt="">
+                <div class="project-icon-box">
+                    <i class="bx bx-building-house"></i>
+                </div>
 
                 <h3>BHSM</h3>
                 <ul class="project-list">
@@ -227,50 +335,64 @@
 
     <section class="certificate" id="certificate">
 
-        <h2 class="heading">Certif<span>icate</span></h2>
+        <h2 class="heading">Backgrou<span>nd</span></h2>
 
-        <div class="certificate-box">
+        <div class="cert-stack">
 
-            <div class="certificate-card" data-tilt>
-                
-                <i class='bx bxs-badge-check'></i>
+            <div class="staircase-card" data-tilt>
+                <div class="cert-icon-box"><i class='bx bxs-graduation'></i></div>
+                <h3>Experience & Education</h3>
+                <div class="cert-detail">
+                    <p class="cert-title">Diploma in Web Application Development</p>
+                    <p class="cert-school">ACLC College of Tacloban</p>
+                    <p class="cert-desc">Completed a three-year diploma program focused on modern web technologies, database systems, and software engineering principles.</p>
+                    <div class="cert-meta">
+                        <span><i class='bx bx-calendar'></i> 2023 – 2026</span>
+                        <span><i class='bx bx-map-pin'></i> Tacloban City</span>
+                    </div>
+                </div>
+            </div>
 
-                <h3>NCII</h3>
-                <p>NATIONAL CERTIFICATE II IN SYSTEM SERVICING(CSS) 
-                <!-- <div class="btn">View</div> -->
-                </p>
+            <div class="staircase-card" data-tilt>
+                <div class="cert-icon-box"><i class='bx bxs-badge-check'></i></div>
+                <h3>National Certificate II — CSS</h3>
+                <div class="cert-detail">
+                    <p class="cert-title">Computer System Servicing</p>
+                    <p class="cert-school">TESDA</p>
+                    <p class="cert-desc">Nationally recognized certification validating competency in computer system servicing, hardware troubleshooting, and technical support.</p>
+                    <div class="cert-meta">
+                        <span><i class='bx bx-check-shield'></i> Verified</span>
+                    </div>
+                </div>
             </div>
 
         </div>
 
     </section>
 
-    <!-- <section class="contact" id="contact">
+    <section class="reach-out" id="contact">
 
-        <h2 class="heading">Contact <span>Me</span></h2>
+        <h2 class="heading">Reach <span>Out</span></h2>
 
-        <form action="#">
-
-        <div class="input-group">
-
-            <div class="input-box">
-                <input type="text" placeholder="Full Name">
-                <input type="email" placeholder="Email">
+        <div class="reach-card">
+            <div class="reach-item">
+                <i class='bx bx-envelope'></i>
+                <div class="reach-info">
+                    <span class="reach-label">Email</span>
+                    <a href="mailto:jcubian2005@gmail.com" class="reach-value">dev - jcubian2005@gmail.com</a>
+                </div>
             </div>
-
-            <div class="input-box">
-                <input type="number" placeholder="Phone Number">
-                <input type="text" placeholder="Subject">
+            <div class="reach-divider"></div>
+            <div class="reach-item">
+                <i class='bx bx-file'></i>
+                <div class="reach-info">
+                    <span class="reach-label">Download CV</span>
+                    <a href="Jedrick_Adam_Carl_L_Cubian_Resume.pdf" download class="reach-value cv-link">Jedrick_Adam_Carl_L_Cubian_Resume.pdf</a>
+                </div>
             </div>
-
         </div>
 
-        <div class="input-group-2">
-            <textarea name="" id="" placeholder="Your Message" cols="30" rows="10"></textarea>
-            <input type="submit" value="Send Message" class="btn">
-        </div>
-    </form>
-    </section> -->
+    </section>
 
     <footer class="footer">
         <div class="social-icons">
