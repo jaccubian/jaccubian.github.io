@@ -1,3 +1,4 @@
+const isDesktop = window.innerWidth >= 768;
 let menuIcon = document.querySelector('#menu-icon');
 let navbar = document.querySelector('.navbar');
 
@@ -40,7 +41,7 @@ if (typeof Swiper !== 'undefined') {
     });
 }
 
-if (typeof VanillaTilt !== 'undefined') {
+if (isDesktop && typeof VanillaTilt !== 'undefined') {
     VanillaTilt.init(document.querySelectorAll('[data-tilt]'), {
         max: 15,
         speed: 400,
@@ -54,7 +55,7 @@ const hero = document.querySelector('.home');
 const heroContent = document.querySelector('.home-content');
 const heroImg = document.querySelector('.home-img');
 
-if (hero && heroContent && heroImg) {
+if (isDesktop && hero && heroContent && heroImg) {
     hero.addEventListener('mousemove', (e) => {
         const rect = hero.getBoundingClientRect();
         const x = (e.clientX - rect.left) / rect.width - 0.5;
@@ -69,15 +70,17 @@ if (hero && heroContent && heroImg) {
     });
 }
 
-document.querySelectorAll('.service-box').forEach(box => {
-    box.addEventListener('mousemove', (e) => {
-        const rect = box.getBoundingClientRect();
-        const x = ((e.clientX - rect.left) / rect.width) * 100;
-        const y = ((e.clientY - rect.top) / rect.height) * 100;
-        box.style.setProperty('--mouse-x', x + '%');
-        box.style.setProperty('--mouse-y', y + '%');
+if (isDesktop) {
+    document.querySelectorAll('.service-box').forEach(box => {
+        box.addEventListener('mousemove', (e) => {
+            const rect = box.getBoundingClientRect();
+            const x = ((e.clientX - rect.left) / rect.width) * 100;
+            const y = ((e.clientY - rect.top) / rect.height) * 100;
+            box.style.setProperty('--mouse-x', x + '%');
+            box.style.setProperty('--mouse-y', y + '%');
+        });
     });
-});
+}
 
 const sections = document.querySelectorAll('section:not(.home)');
 if (sections.length) {
