@@ -7,6 +7,13 @@ menuIcon.onclick = () => {
     navbar.classList.toggle('active');
 };
 
+document.querySelectorAll('.navbar a').forEach(link => {
+    link.addEventListener('click', () => {
+        menuIcon.classList.remove('bx-x');
+        navbar.classList.remove('active');
+    });
+});
+
 if (typeof Swiper !== 'undefined') {
     new Swiper('.services-swiper', {
         slidesPerView: 'auto',
