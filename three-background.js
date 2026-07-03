@@ -1,5 +1,6 @@
 (function () {
   if (typeof THREE === 'undefined') return;
+  if (window.innerWidth < 768) return;
 
   const scene = new THREE.Scene();
   scene.background = null;
