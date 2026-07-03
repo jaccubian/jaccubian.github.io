@@ -5,6 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>JAC | Full-Stack Dev</title>
     <link rel="icon" type="image/png" href="/jac.png.png" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="preconnect" href="https://unpkg.com" />
     <link rel="stylesheet" href="Style.css" />
     <link
       href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
@@ -66,7 +69,7 @@
             </div> -->
         </div>
             <div class="home-img">
-                <img src="image.jpg" alt="">
+                <img src="image.jpg" alt="" loading="lazy">
             </div>
     </section>
 
@@ -432,10 +435,20 @@
     </footer>
 
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/vanilla-tilt/1.8.1/vanilla-tilt.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-    <script src="three-background.js"></script>
+    <script>
+      if (window.innerWidth >= 768) {
+        const threeScript = document.createElement('script');
+        threeScript.src = 'https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js';
+        threeScript.onload = () => {
+          const bgScript = document.createElement('script');
+          bgScript.src = 'three-background.js';
+          document.body.appendChild(bgScript);
+        };
+        document.body.appendChild(threeScript);
+      }
+    </script>
     <script src="script.js"></script>
   </body>
 </html>
