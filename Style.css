@@ -18,7 +18,7 @@
   --glass-border: rgba(0, 240, 255, 0.15);
 }
 html {
-  font-size: 60%;
+  font-size: 62.5%;
   overflow-x: hidden;
 }
 body{
@@ -47,7 +47,7 @@ header{
     width: 100%;
     top: 0;
     left: 0;
-    padding: 2.5rem 15%;
+    padding: 2.5rem clamp(1.5rem, 5vw, 15%);
     background: rgba(10, 10, 15, 0.7);
     backdrop-filter: blur(20px);
     -webkit-backdrop-filter: blur(20px);
@@ -79,7 +79,7 @@ header{
 .logo:hover{
     transform: scale(1.05);
 }
-span{
+.gradient-text {
     background: linear-gradient(
         135deg,
         var(--main-color) 0%,
@@ -207,7 +207,7 @@ span{
 
 section{
     min-height: 100vh;
-    padding: 10rem 15%;
+    padding: clamp(4rem, 10vw, 10rem) clamp(1.5rem, 5vw, 15%);
     position: relative;
     z-index: 1;
 }
@@ -215,7 +215,7 @@ section{
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 15rem;
+    gap: clamp(3rem, 10vw, 15rem);
     background: rgba(10, 10, 15, 0.85);
 }
 .home-content{
@@ -257,7 +257,7 @@ section{
 }
 
 .glitch-name {
-    font-size: 9rem;
+    font-size: clamp(3rem, 12vw, 9rem);
     font-weight: 700;
     margin-top: 0.5rem;
     line-height: 1;
@@ -283,7 +283,7 @@ section{
 
 .role-line {
     margin: 0.5rem 0 1.5rem 0;
-    font-size: 3.5rem;
+    font-size: clamp(1.6rem, 5vw, 3.5rem);
     font-family: "Orbitron", sans-serif;
     letter-spacing: 2px;
     display: flex;
@@ -346,7 +346,7 @@ section{
     100% { height: 100%; }
 }
 .home-img img{
-    width: 28vw;
+    width: min(28vw, 280px);
     border-radius: 50%;
     box-shadow:
         0 0 30px rgba(0, 240, 255, 0.3),
@@ -443,11 +443,12 @@ section{
     justify-content: center;
     cursor: grab;
     user-select: none;
+    touch-action: pan-y pinch-zoom;
 }
 
 .spiral-card {
     position: absolute;
-    width: 240px;
+    width: min(240px, 70vw);
     background: rgba(255, 255, 255, 0.02);
     backdrop-filter: blur(6px);
     -webkit-backdrop-filter: blur(6px);
@@ -658,7 +659,7 @@ section{
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 20rem;
+    gap: clamp(3rem, 10vw, 20rem);
     background: rgba(18, 18, 26, 0.85);
 }
 .about-img img{
@@ -691,9 +692,9 @@ section{
 .about-layout {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 8rem;
+    gap: clamp(2rem, 5vw, 8rem);
     align-items: center;
-    padding: 2rem 4rem;
+    padding: clamp(1rem, 3vw, 2rem) clamp(1rem, 4vw, 4rem);
 }
 
 .about-text {
@@ -755,8 +756,8 @@ section{
 
 .heading{
     text-align: center;
-    font-size: 7rem;
-    margin: 5rem 0;
+    font-size: clamp(2.5rem, 8vw, 7rem);
+    margin: clamp(2rem, 5vw, 5rem) 0;
     perspective: 800px;
     transform-style: preserve-3d;
     font-family: "Orbitron", sans-serif;
@@ -817,7 +818,7 @@ section:hover .heading {
     justify-content: center;
     align-items: center;
     padding: 2rem 1rem;
-    width: 320px;
+    width: min(320px, 85vw);
 }
 
 .services-swiper .swiper-slide .service-box {
@@ -1443,7 +1444,7 @@ section {
         position: absolute;
         top: 100%;
         right: 0;
-        width: 60%;
+        width: min(320px, 80%);
         padding: 1.5rem 3rem;
         background: rgba(10, 10, 15, 0.95);
         backdrop-filter: blur(20px);
@@ -1451,7 +1452,11 @@ section {
         border-bottom-left-radius: 1rem;
         border-left: 1px solid rgba(0, 240, 255, 0.2);
         border-bottom: 1px solid rgba(0, 240, 255, 0.2);
-        display: none;
+        max-height: 0;
+        opacity: 0;
+        overflow: hidden;
+        transition: max-height 0.4s ease, opacity 0.3s ease, padding 0.3s ease;
+        padding: 0 3rem;
     }
     .navbar a{
         display: block;
@@ -1463,7 +1468,9 @@ section {
         display: none;
     }
     .navbar.active{
-        display: block;
+        max-height: 100vh;
+        opacity: 1;
+        padding: 1.5rem 3rem;
     }
     .gradiant-btn{
         display: none;
@@ -1661,6 +1668,20 @@ section {
     }
     .reach-value {
         font-size: 1.4rem;
+    }
+}
+
+@media (max-width: 768px) {
+    header {
+        backdrop-filter: blur(10px);
+        -webkit-backdrop-filter: blur(10px);
+    }
+    .service-box,
+    .project-card,
+    .staircase-card,
+    .spiral-card {
+        backdrop-filter: blur(4px);
+        -webkit-backdrop-filter: blur(4px);
     }
 }
 
